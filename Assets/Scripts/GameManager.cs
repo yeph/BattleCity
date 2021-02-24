@@ -132,7 +132,10 @@ public class GameManager : MonoBehaviour
     //生成自己的tank
     void CreatePlayer()
     {
-        if (PlayerCount <= 0) return;
+        if (PlayerCount <= 0)
+        {
+            GameOver();
+        };
         if (born != null && bornPos.Length >= 4 && bornPos[0] != null)
         {
             var obj = Instantiate(born, bornPos[0].transform.position, born.transform.rotation);

@@ -35,15 +35,19 @@ public class Born : MonoBehaviour
             case TankType.Player:
                 if (tankList[0] == null) return;
                  obj = Instantiate(tankList[0],this.transform.position,tankList[0].transform.rotation);
+                obj.name = "Player";
                 break;
             case TankType.Enemy1:
                  obj = Instantiate(tankList[1], this.transform.position, tankList[1].transform.rotation);
+                obj.name = "Enemy1";
                 break;
             case TankType.Enemy2:
                  obj = Instantiate(tankList[2], this.transform.position, tankList[2].transform.rotation);
+                obj.name = "Enemy2";
                 break;
             case TankType.Enemy3:
                  obj = Instantiate(tankList[3], this.transform.position, tankList[3].transform.rotation);
+                obj.name = "Enemy3";
                 break;
         }
     }
